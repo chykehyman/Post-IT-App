@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign In: PostIt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-5">
+                        <span class="glyphicon glyphicon-inbox"></span>
+                        <h3>PostIt App</h3>
+                        <span class="text-muted text-right">connect the world</span>
+                    </div>
+                    <div class="col-md-7">
+                        <h4>Sign In</h4>
+                        <p>Dont have a postit account? <a href="/signup">Create a free account</a></p>
+                        <form role="form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="user">Username</label>
+                                <input type="text" class="form-control" id="user" placeholder="enter username">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">Password</label>
+                                <input type="password" class="form-control" id="pass" placeholder="enter password">
+                            </div>
+                            <a data-toggle="modal" href="#forgotModal">Forgot your password?</a>
+                            <button type="submit" class="btn btn-primary">Sign In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="forgotModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Forgot your password? No worries</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="email" type="email" class="form-control" name="email" placeholder="enter email">
+                                </div>
+                                <button type="submit" class="btn btn-default btn-success"><span class="glyphicon glyphicon-send"></span> Submit</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="text-center text-muted">© Copyright 2017 PostIt.. A Trademark of Andela</p>
+    </footer>
+
+</body>
+
+</html>
