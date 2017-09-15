@@ -15,23 +15,20 @@ const Users = sequelize.define('Users', {
         type: Sequelize.STRING,
         allowNull: false,
     }
-}, {
-    timestamps: true,
-    updatedAt: false
 });
 
 Users.associate = (models) => {
     Users.hasMany(models.Groups, {
         foreignKey: 'userId',
-        as: 'groups'
+        as: 'userId'
     });
     Users.hasMany(models.UsersGroups, {
         foreignKey: 'userId',
-        as: 'usersgroups'
+        as: 'userId'
     });
     Users.hasMany(models.Messages, {
         foreignKey: 'userId',
-        as: 'messages'
+        as: 'userId'
     });
 };
 

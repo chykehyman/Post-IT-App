@@ -4,7 +4,7 @@ import sequelize from '../db_connection';
 const Messages = sequelize.define('Messages', {
     message: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
     },
     userId: {
         type: Sequelize.INTEGER,
@@ -26,11 +26,8 @@ const Messages = sequelize.define('Messages', {
     },
     priority: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
     }
-}, {
-    timestamps: true,
-    updatedAt: false
 });
 
 Messages.associate = (models) => {

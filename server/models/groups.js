@@ -5,11 +5,11 @@ const Groups = sequelize.define('Groups', {
     groupName: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
+        unique: true
     },
     description: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
     },
     groupType: {
         type: Sequelize.STRING,
@@ -24,19 +24,16 @@ const Groups = sequelize.define('Groups', {
             as: 'userId'
         }
     }
-}, {
-    timestamps: true,
-    updatedAt: false
 });
 
 Groups.associate = (models) => {
     Groups.hasMany(models.UsersGroups, {
         foreignKey: 'groupId',
-        as: 'groupmembers'
+        as: 'groupId'
     });
     Groups.hasMany(models.Messages, {
         foreignKey: 'groupId',
-        as: 'groupmembers'
+        as: 'groupId'
     });
     Groups.belongsTo(models.Users, {
         foreignKey: 'userId',

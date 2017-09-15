@@ -13,11 +13,11 @@ script:
   - npm install
   - gulp
   - npm run testRoute
-# services:
-#   - postgresql
-# before_script:
-#   - psql -c 'create database travis_ci_testdb;' -U postgres
-#   - sequelize db:migrate
+addons:
+  postgresql: "9.6" 
+before_script:
+  - psql -c 'create database travis_ci_testdb;' -U postgres
+  - sequelize db:migrate
 # after_success:
 # - npm run coveralls
 # notifications:

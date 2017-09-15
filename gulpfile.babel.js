@@ -65,4 +65,4 @@ gulp.task('run-routes-tests', () => {
 // }); */
 
 
-// gulp.task('default', ['coverage']);
+gulp.task('default', ['run-routes-tests']);

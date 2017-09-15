@@ -25,8 +25,6 @@ const UsersGroups = sequelize.define('UsersGroups', {
             as: 'groupId'
         }
     }
-}, {
-    timestamps: false
 });
 
 UsersGroups.associate = (models) => {
