@@ -18,7 +18,7 @@ gulp.task('run-models-tests', () => {
 });
 // Run the routes test
 gulp.task('run-routes-tests', () => {
-    gulp.src(['server/spec/signupSpec.js'])
+    gulp.src(['server/spec/routeSpec.js'])
         .pipe(babel())
         .pipe(injectModules())
         .pipe(jasmine())
