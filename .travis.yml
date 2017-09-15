@@ -8,15 +8,16 @@ branches:
     - master
 cache:
   directories:
-    - "node_modules"    
+    - "node_modules"
+env:
+  - NODE_ENV=test        
 script: 
   - npm install
   - gulp
-  - npm run testRoute
 addons:
   postgresql: "9.6" 
 before_script:
-  - psql -c 'create database travis_ci_testdb;' -U postgres
+  - psql -c 'create database travisdb;' -U postgres
   - sequelize db:migrate
 # after_success:
 # - npm run coveralls

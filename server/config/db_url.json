@@ -1,3 +1,23 @@
 {
-    "url": "postgres://postgres:richman@127.0.0.1:5432/broadpost"
+    "development": {
+        "username": "postgres",
+        "password": "richman",
+        "database": "broadpost",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "postgres",
+        "password": "richman",
+        "database": "travisdb",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "production": {
+        "username": "root",
+        "password": null,
+        "database": "database_production",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    }
 }

@@ -1,8 +1,20 @@
 import Sequelize from 'sequelize';
-import config from './config/db_url.json';
+import configurations from './config/db_url.json';
 
+const env = process.env.NODE_ENV || 'development';
+const config = configurations[env];
 
-const sequelize = new Sequelize(config.url);
+let sequelizeConnect;
+if (config.use_env_variable) {
+    sequelizeConnect = new Sequelize(process.env[config.use_env_variable]);
+} else {
+    sequelizeConnect = new Sequelize(
+        config.database, config.username, config.password, config
+    );
+}
+const sequelize = sequelizeConnect;
+
+// const sequelize = new Sequelize(config.url);
 // sequelize
 //     .authenticate()
 //     .then(() => console.log('Database connected successfully.'))
