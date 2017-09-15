@@ -6,25 +6,14 @@ const Users = sequelize.define('Users', {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true,
-        validate: {
-            notEmpty: true
-        }
     },
     email: {
         type: Sequelize.STRING,
         unique: true,
-        validate: {
-            isEmail: true,
-            notEmpty: true
-        }
     },
     password: {
         type: Sequelize.STRING,
         allowNull: false,
-        validate: {
-            notEmpty: true,
-            len: [8, 100]
-        }
     }
 }, {
     timestamps: true,

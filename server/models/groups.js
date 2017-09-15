@@ -6,25 +6,14 @@ const Groups = sequelize.define('Groups', {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true,
-        validate: {
-            notEmpty: true
-        }
     },
     description: {
         type: Sequelize.STRING,
         allowNull: false,
-        validate: {
-            notEmpty: true
-        }
     },
     groupType: {
         type: Sequelize.STRING,
-        defaultValue: 'public',
-        validate: {
-            isIn: [
-                ['public', 'private']
-            ]
-        }
+        defaultValue: 'public'
     },
     userId: {
         type: Sequelize.INTEGER,

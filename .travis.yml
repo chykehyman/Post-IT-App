@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+    - "6.10.3"
+before_script:
+  - npm install -g gulp-cli
+branches:
+  only:
+    - master
+cache:
+  directories:
+    - "node_modules"    
+script: 
+  - npm install
+  - gulp
+  - npm run testRoute
+# services:
+#   - postgresql
+# before_script:
+#   - psql -c 'create database travis_ci_testdb;' -U postgres
+#   - sequelize db:migrate
+# after_success:
+# - npm run coveralls
+# notifications:
+#   webhooks: https://coveralls.io/webhook?repo_token=1LqYqgo8Da9hnzuSe1AV8P0SkIuilXTSu

@@ -5,9 +5,6 @@ const Messages = sequelize.define('Messages', {
     message: {
         type: Sequelize.STRING,
         allowNull: false,
-        validate: {
-            notEmpty: true
-        }
     },
     userId: {
         type: Sequelize.INTEGER,
@@ -30,11 +27,6 @@ const Messages = sequelize.define('Messages', {
     priority: {
         type: Sequelize.STRING,
         allowNull: false,
-        validate: {
-            isIn: [
-                ['normal', 'urgent', 'critical']
-            ]
-        }
     }
 }, {
     timestamps: true,
