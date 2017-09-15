@@ -7,6 +7,11 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
+            admin: {
+                type: Sequelize.STRING,
+                allowNull: false,
+                defaultValue: 'no'
+            },
             userId: {
                 type: Sequelize.INTEGER,
                 onDelete: 'CASCADE',
