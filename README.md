@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/chykehyman/PostItApp.svg?branch=master)](https://travis-ci.org/chykehyman/PostItApp)
+[![license](https://img.shields.io/github/license/chykehyman/PostItApp.svg)]()
+[![Packagist](https://img.shields.io/packagist/v/chykehyman/PostItApp.svg)]()
+
 # PostIt NodeJS/ReactJS Web Application
 
 ## Introduction 
