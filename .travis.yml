@@ -18,7 +18,7 @@ addons:
   postgresql: "9.6" 
 before_script:
   - psql -c 'create database travisdb;' -U postgres
-  - sequelize db:migrate
+  - ./node_modules/.bin/sequelize db:migrate
 # after_success:
 # - npm run coveralls
 # notifications:
