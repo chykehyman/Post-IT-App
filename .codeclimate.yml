@@ -9,6 +9,13 @@ engines:
       - javascript
   fixme:
     enabled: true
+  eslint:
+    enabled: true
+    checks:
+      import/extensions:
+        enabled: false
+      no-multiple-empty-lines:
+        enabled: false  
 ratings:
   paths:
   - "server/*.js"
@@ -17,3 +24,4 @@ exclude_paths:
 - node_modules/
 - .vscode
 - server/spec/
+- templates/
