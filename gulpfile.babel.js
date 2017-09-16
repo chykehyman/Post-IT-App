@@ -34,25 +34,25 @@ gulp.task('run-routes-tests', () => {
 //         .pipe(exit());
 // });
 
-// // Generate the coverage report
-// gulp.task('coverage', () => {
-//     gulp.src(['server/controllers/controller.js', 'server/middlewares/validator.js'])
-//         .pipe(istanbul())
-//         .pipe(istanbul.hookRequire())
-//         .on('finish', () => {
-//             gulp.src(['server/spec/routeSpec.js'])
-//                 .pipe(babel())
-//                 .pipe(injectModules())
-//                 .pipe(jasmine())
-//                 .pipe(istanbul.writeReports())
-//                 .pipe(istanbul.enforceThresholds({ thresholds: { global: 20 } }))
-//                 .on('end', () => {
-//                     gulp.src('coverage/lcov.info')
-//                         .pipe(coveralls())
-//                         .pipe(exit());
-//                 });
-//         });
-// });
+// Generate the coverage report
+gulp.task('coverage', () => {
+    gulp.src(['server/controllers/controller.js', 'server/middlewares/validator.js'])
+        .pipe(istanbul())
+        .pipe(istanbul.hookRequire())
+        .on('finish', () => {
+            gulp.src(['server/spec/routeSpec.js'])
+                .pipe(babel())
+                .pipe(injectModules())
+                .pipe(jasmine())
+                .pipe(istanbul.writeReports())
+                .pipe(istanbul.enforceThresholds({ thresholds: { global: 20 } }))
+                .on('end', () => {
+                    gulp.src('coverage/lcov.info')
+                        .pipe(coveralls())
+                        .pipe(exit());
+                });
+        });
+});
 
 // // Load code coverage to coveralls
 // /* gulp.task('coveralls', ['coverage'], () => {
