@@ -3,7 +3,12 @@
 # dependencies
 node_modules
 
+# folders
 .vscode
+coverage
+
+# config files
+#.coveralls.yml
 
 # misc
 .DS_Store

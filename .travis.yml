@@ -1,25 +1,27 @@
 language: node_js
 node_js:
     - "6.10.3"
-before_script:
-  - npm install -g gulp-cli
 branches:
   only:
-    - master
-cache:
-  directories:
-    - "node_modules"
+    - master  
 env:
-  - NODE_ENV=test        
-script: 
-  - npm install
-  - gulp
-addons:
-  postgresql: "9.6" 
+  - NODE_ENV=test         
 before_script:
+  - npm install -g gulp-cli codeclimate-test-reporter
   - psql -c 'create database travisdb;' -U postgres
   - ./node_modules/.bin/sequelize db:migrate
-after_success:
-- npm run coveralls
-# notifications:
-#   webhooks: https://coveralls.io/webhook?repo_token=1LqYqgo8Da9hnzuSe1AV8P0SkIuilXTSu
+cache:
+  directories:
+    - "node_modules"     
+script: 
+  - npm install
+  - gulp   
+after_success:       
+  - codeclimate-test-reporter < ./coverage/lcov.info 
+addons:
+  postgresql: "9.6"
+  code_climate:
+    repo_token:
+      secure: 562275715bc54638814f1c27bb4df1a9a2323f808c6eda859982040702c90942   
+notifications:
+  webhooks: https://coveralls.io/webhook?repo_token=4QHTpRbU6DkqaTHX8qHZZYRQT2ftj9AAD

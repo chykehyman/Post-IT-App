@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/chykehyman/PostItApp.svg?branch=master)](https://travis-ci.org/chykehyman/PostItApp)
+[![Coverage Status](https://coveralls.io/repos/github/chykehyman/PostItApp/badge.svg?branch=master)](https://coveralls.io/github/chykehyman/PostItApp?branch=master)
+[![Code Climate](https://codeclimate.com/github/chykehyman/PostItApp/badges/gpa.svg)](https://codeclimate.com/github/chykehyman/PostItApp)
 [![license](https://img.shields.io/github/license/chykehyman/PostItApp.svg)]()
 [![Packagist](https://img.shields.io/packagist/v/chykehyman/PostItApp.svg)]()
 

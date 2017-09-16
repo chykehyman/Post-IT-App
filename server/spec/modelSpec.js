@@ -21,7 +21,6 @@ describe('All Model Test Suite', () => {
                 Users.create({ username: 'Chike', email: 'chike@gmail.com', password: 'ilovecoding' })
                     .then((user) => {
                         if (user) {
-                            //     console.log('inside the promise');
                             expect('Chike').toEqual(user.username);
                             //     // expect(user.email).toEqual('');
                             //     // expect(true).toBe(false);
