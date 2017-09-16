@@ -1,0 +1,4 @@
+server/spec/*
+server/spec/**/*
+server/coverage/*
+server/coverage/**/*
