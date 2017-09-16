@@ -38,7 +38,7 @@
         "semi": ["error", "always"],
         "eol-last": ["off", "always"],
         "indent": ["error", 4],
-        "linebreak-style": ["error", "windows"],
+        "linebreak-style": ["off", "windows"],
         "no-console": ["off", "always"],
         "max-len": [1, 200, 2],
         "class-methods-use-this": ["error", {
