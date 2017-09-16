@@ -9,7 +9,7 @@ export default class VerifyToken {
      * @param {obj} req
      * @param {obj} res
      * @param {obj} next
-     * @returns {obj} Failure error message on denied request or User decoded data on granted request 
+     * @returns {obj} Failure error message on denied request or User decoded data on granted request
      */
     static checkToken(req, res, next) {
         const token = req.body.token || req.query.token || req.headers['x-access-token'];

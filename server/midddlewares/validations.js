@@ -157,7 +157,7 @@ export default class Validation {
     }
 
 
-    /** 
+    /**
      * Validates the message form input fields before allowing access to the database
      * @param {obj} req
      * @param {obj} res
